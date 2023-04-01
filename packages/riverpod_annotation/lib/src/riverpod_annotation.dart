@@ -53,3 +53,19 @@ class ProviderFor {
   /// The code annotated by `@riverpod`
   final Object value;
 }
+
+class Scopes {
+  /// {@macros riverpod_annotation.scoped}
+  const Scopes(this.scopes);
+
+  /// The list of providers that a widget depends on, either directly or transitively.
+  final List<Object>? scopes;
+}
+
+class Injects {
+  /// {@macros riverpod_annotation.injects}
+  const Injects(this.scopes);
+
+  /// The list of providers that are injected in the widget/builder
+  final List<Object>? scopes;
+}
