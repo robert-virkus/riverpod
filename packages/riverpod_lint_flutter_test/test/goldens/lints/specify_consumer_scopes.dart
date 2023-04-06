@@ -8,11 +8,14 @@ part 'specify_consumer_scopes.g.dart';
 // TODO "Scaffold"-like widget which has an inner ProviderScope overriding providers
 // TODO "Builder"-like widget which has an inner ProviderScope overriding providers
 // TODO test @Injects with missing/extra scopes
+// TODO test ref.watch(dynamicProvider)
+// TODO test scopes inside State lifecycle methods
+// TODO test Consumer inside ConsumerWidget but button uses ConsumerWidget's ref instead of Consumer's ref
 
-@Riverpod(dependencies: [])
+@riverpod
 int root(RootRef ref) => 0;
 
-@Riverpod(dependencies: [])
+@riverpod
 class Root2 extends _$Root2 {
   @override
   int build() => 0;
@@ -51,8 +54,8 @@ class TransitiveConsumer extends ConsumerWidget {
   }
 }
 
-// expect_lint: specify_consumer_scopes
 @Scopes([scoped])
+// expect_lint: specify_consumer_scopes
 class ExtraScope extends ConsumerWidget {
   const ExtraScope({super.key});
 
@@ -62,8 +65,8 @@ class ExtraScope extends ConsumerWidget {
   }
 }
 
-// expect_lint: specify_consumer_scopes
 @Scopes([scoped])
+// expect_lint: specify_consumer_scopes
 class MissingProvider extends ConsumerWidget {
   const MissingProvider({super.key});
 

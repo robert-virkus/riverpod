@@ -6,7 +6,7 @@ class ProviderScopeInstanceCreationExpression extends RiverpodAst {
     required this.overrides,
   });
 
-  static ProviderScopeInstanceCreationExpression? _parse(
+  static ProviderScopeInstanceCreationExpression? parse(
     InstanceCreationExpression node,
   ) {
     final createdType = node.constructorName.type.type;

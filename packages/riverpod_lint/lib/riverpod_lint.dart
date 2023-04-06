@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import 'src/assists/convert_to_consumer_stateful_widget.dart';
@@ -12,7 +14,7 @@ import 'src/lints/missing_provider_scope.dart';
 import 'src/lints/provider_dependencies.dart';
 import 'src/lints/provider_parameters.dart';
 import 'src/lints/scoped_providers_should_specify_dependencies.dart';
-import 'src/lints/specify_consumer_scoped.dart';
+import 'src/lints/specify_consumer_scopes.dart';
 import 'src/lints/stateless_ref.dart';
 import 'src/lints/unsupported_provider_value.dart';
 

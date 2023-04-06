@@ -54,6 +54,7 @@ class ProviderFor {
   final Object value;
 }
 
+@sealed
 class Scopes {
   /// {@macros riverpod_annotation.scoped}
   const Scopes(this.scopes);
@@ -62,6 +63,7 @@ class Scopes {
   final List<Object>? scopes;
 }
 
+@sealed
 class Injects {
   /// {@macros riverpod_annotation.injects}
   const Injects(this.scopes);

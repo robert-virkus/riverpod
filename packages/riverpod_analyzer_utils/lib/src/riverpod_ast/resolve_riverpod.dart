@@ -122,7 +122,7 @@ mixin _ParseRefInvocationMixin on RecursiveAstVisitor<void> {
   @override
   void visitInstanceCreationExpression(InstanceCreationExpression node) {
     final providerScopeInstanceCreationExpression =
-        ProviderScopeInstanceCreationExpression._parse(node);
+        ProviderScopeInstanceCreationExpression.parse(node);
     if (providerScopeInstanceCreationExpression != null) {
       visitProviderScopeInstanceCreationExpression(
         providerScopeInstanceCreationExpression,
